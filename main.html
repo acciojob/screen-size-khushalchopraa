@@ -5,10 +5,33 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
+	<style>
+	#sizeInfo{
+		
+	}
+	</style>
 
 <body>
 	<!-- the entire body must be written by student -->
+	<div id="sizeInfo">
+		<h1>Width:<span id=widthvalue></span> and Height:<span id="heightvalue"></span></h1>
+	</div>
     <script type="text/javascript" src="./script.js">
+	 // Function to update width and height values
+    function updateSizeInfo() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        // Update the content of the <span> elements
+        document.getElementById('widthValue').textContent = width;
+        document.getElementById('heightValue').textContent = height;
+    }
+
+    // Initial call to set the initial values
+    updateSizeInfo();
+
+    // Event listener for window resize
+    window.addEventListener('resize', updateSizeInfo);
 </script>
 
 </body>
